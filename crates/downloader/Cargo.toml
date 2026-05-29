@@ -1,0 +1,21 @@
+[package]
+name = "afrasyab-downloader"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+afrasyab-domain = { path = "../domain" }
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+url = { workspace = true }
+teloxide = { workspace = true }
+futures-util = { workspace = true }
+tracing = { workspace = true }
+mime_guess = "2"
+
+[dev-dependencies]
+mockito = { workspace = true }
+uuid = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }

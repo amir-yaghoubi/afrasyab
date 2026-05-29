@@ -1,0 +1,33 @@
+[package]
+name = "afrasyab-app"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "afrasyab"
+path = "src/main.rs"
+
+[dependencies]
+afrasyab-core = { path = "../core" }
+afrasyab-domain = { path = "../domain" }
+afrasyab-downloader = { path = "../downloader" }
+afrasyab-drive = { path = "../drive" }
+afrasyab-oauth = { path = "../oauth" }
+afrasyab-storage = { path = "../storage" }
+afrasyab-telegram = { path = "../telegram" }
+anyhow = { workspace = true }
+serde_json = { workspace = true }
+dotenvy = { workspace = true }
+async-trait = { workspace = true }
+axum = { workspace = true }
+sqlx = { workspace = true, features = ["runtime-tokio", "sqlite", "migrate"] }
+teloxide = { workspace = true, features = ["macros"] }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+url = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+base64 = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
